@@ -162,6 +162,10 @@ let compromat=['DSC_7007.JPG', 'DSC_7008.JPG', 'DSC_7009.JPG', 'DSC_7010.JPG',
   console.log(`${compTwo[count]}`);
 document.querySelector('#gallery').addEventListener('click',()=>{
   count++;
+  if(count>=compromat.length){
+    count=0;
+    document.querySelector('#gallery').setAttribute('src', "photo/"+`${compromat[count]}`);
+  }
   document.querySelector('#gallery').setAttribute('src', "photo/"+`${compromat[count]}`);
 })
 function soundClick() {
